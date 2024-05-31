@@ -68,11 +68,16 @@ Now that we have all of our users created and our whole environment set up let's
 
 The very last thing we have to do really is create this windows 10 virtual machine in virtualbox it's just going to use a internal nic and it should get its ip address like it says here from our dhcp server that we configured and then we'll verify that after the fact.
 
-![hello](Images/Diag10.png)
-![hello](Images/Diag11.png)
+
 
 for the network instead of using that and connecting to our home network we're going to click internal network adapter like looking at our diagram you can see we configured it to use the internal one so on purpose so we can connect to like we can get a dhcp address from the domain controller. 
 
-![hello](Images/Diag12.png)
 
+Rename the computer and join to the mydomain.com click this change under to rename this computer click change and then we're going to name it client one according to our network architecture diagram thing and then we're also going to try to join the domain at the same time so mydomain.com is what we named our domain so we can say okay and then you need to type a password who's allowed to join this account to the domain.
+
+Logging in with that local user that we created we can click other user and then we can see down here that we're going to sign into my domain this is mydomain.com and because of this we can use one of the user accounts that we created earlier and that kind of powershell script with same password for like every single user is just "Password1".
+
+
+We've created like a mini kind of a mini corporate network with this and we [Music] like the account creation process you can imagine it like we got hired and then our name went into like some batch file somewhere and then the next morning the batch script ran and then created like all the new accounts and our account was subsequently created and then this you can imagine this client one virtual machine you can kind of imagine it as your corporate laptop so you got that and then um you can automatically log into it with your corporate credentials because it's already on the domain and you're like already on the network and and everything like that so going back to our going back to our client computer you can see we have our desktop and everything and and we're logged in and and everything
+ 
 Then we're going to configure that and routing so the clients on the private network can reach the internet through the domain controller next we're going to set up a dhcp on the domain controller so when we create our windows 10 machine it can automatically get an ip address and then the last thing we do on the domain controller before we create our client virtual machine is we're going to run a powershell script that will automatically create a thousand users in active directory and i'll kind of go through the script a little bit to explain what each line is so you can kind of get an intuition on how powershell is useful and like what kind of things you can use it for after creating the users we're going to create another virtual machine and install windows 10 on it and that virtual machine will be connected to the private virtual box network we're going to name that machine client1 and join it to the domain and then we're going to log into it with one of our domain accounts at this point our tutorial is going to be pretty much concluded so this environment we're building is a pretty basic windows networking environment with active directory and then just a few networking services
