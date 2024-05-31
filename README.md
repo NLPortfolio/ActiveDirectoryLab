@@ -64,7 +64,9 @@ Go back to the um the domain controller here and then we have to make a configur
 
 Before we actually go and create our create our client computer and like join it to the domain and all that first we're going to um use our powershell script to create a whole bunch of users in active directory so we can kind of have a bunch of sample users
 
-Now that we have all of our users created and our whole environment set up let's let's look at our network diagram again here really quick so we pretty much have everything set up here our internet is is connected 
+Now that we have all of our users created and our whole environment set up let's let's look at our network diagram again here really quick so we pretty much have everything set up here our internet is is connected we have our nick set up we have like our domain set up with all of our users we have nat set up we have like our dhcp setup and our we're connected to our kind of internal vmware network.
+
+The very last thing we have to do really is create this windows 10 virtual machine in virtualbox it's just going to use a internal nic and it should get its ip address like it says here from our dhcp server that we configured and then we'll verify that after the fact so let's go back to our our vm actually let's minimize this domain controller because we're kind of 
 
 ![hello](Images/Diag10.png)
 ![hello](Images/Diag11.png)
