@@ -2,6 +2,8 @@ Tools for the LAB :
 
 - Software oracle virtualbox which is what we're going to use to run our virtual machines
 - A windows 10 iso and a server 2019 iso that we're going to use to install the two operating systems on two separate virtual machines
+(In order to avoid licenses problem, create a blank virtual machine and then import the .vhd)
+
 
 We are going to create our first virtual machine which is going to be our domain controller which is going to house active directory. We are going to give this virtual machine two network adapters one is going to be used to connect to the outside internet and the other one that's going to be used to connect to the virtual box a kind of private network that the clients are going to connect to.
 
