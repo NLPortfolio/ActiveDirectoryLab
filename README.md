@@ -36,4 +36,9 @@ Now we have our very own domain admin account so to use this let's go ahead and 
 
 ![hello](Images/Diag5.png)
 
+The next thing we're going to do is install raz slash nat that's like remo access server network address network address translation the purpose of this is to allow when we create our windows 10 client it's going to allow this client to be on this kind of private virtual network but still be able to access the internet through the domain controller so we're going to install nap like raz and nat on the domain controller to allow our clients to do that so to do this we will go to add roles and features and add remot access. go next and install routing
+
+![hello](Images/Diag6.png)
+
+
 Then we're going to configure that and routing so the clients on the private network can reach the internet through the domain controller next we're going to set up a dhcp on the domain controller so when we create our windows 10 machine it can automatically get an ip address and then the last thing we do on the domain controller before we create our client virtual machine is we're going to run a powershell script that will automatically create a thousand users in active directory and i'll kind of go through the script a little bit to explain what each line is so you can kind of get an intuition on how powershell is useful and like what kind of things you can use it for after creating the users we're going to create another virtual machine and install windows 10 on it and that virtual machine will be connected to the private virtual box network we're going to name that machine client1 and join it to the domain and then we're going to log into it with one of our domain accounts at this point our tutorial is going to be pretty much concluded so this environment we're building is a pretty basic windows networking environment with active directory and then just a few networking services
