@@ -67,16 +67,17 @@ Before we actually go and create our create our client computer and like join it
 
 Now that we have all of our users created and our whole environment set up let's let's look at our network diagram again here really quick so we pretty much have everything set up here our internet is is connected we have our nick set up we have like our domain set up with all of our users we have nat set up we have like our dhcp setup and our we're connected to our kind of internal vmware network.
 
-The very last thing we have to do really is create this windows 10 virtual machine in virtualbox it's just going to use a internal nic and it should get its ip address like it says here from our dhcp server that we configured and then we'll verify that after the fact.
+The very last thing we have to do really is create this windows 10 virtual machine in virtualbox it's just going to use a internal nic and it should get its ip address like it says here from our dhcp server that we configured and then we'll verify that after the fact. For the network instead of using that and connecting to our home network we're going to click internal network adapter like looking at our diagram you can see we configured it to use the internal one so on purpose so we can connect to like we can get a dhcp address from the domain controller. 
 
+![hello](Images/Diag12.png)
 
+Launch the VM; rename the computer and join to the mydomain.com click this change under to rename this computer click change and then we're going to name it client one according to our network architecture diagram thing and then we're also going to try to join the domain at the same time so mydomain.com is what we named our domain so we can say okay and then you need to type a password who's allowed to join this account to the domain.
 
-for the network instead of using that and connecting to our home network we're going to click internal network adapter like looking at our diagram you can see we configured it to use the internal one so on purpose so we can connect to like we can get a dhcp address from the domain controller. 
-
-
-Rename the computer and join to the mydomain.com click this change under to rename this computer click change and then we're going to name it client one according to our network architecture diagram thing and then we're also going to try to join the domain at the same time so mydomain.com is what we named our domain so we can say okay and then you need to type a password who's allowed to join this account to the domain.
+![hello](Images/Diag13.png)
 
 Logging in with that local user that we created we can click other user and then we can see down here that we're going to sign into my domain this is mydomain.com and because of this we can use one of the user accounts that we created earlier and that kind of powershell script with same password for like every single user is just "Password1".
+
+![hello](Images/Diag14.png)
 
 
 We've created like a mini kind of a mini corporate network with this and we like the account creation process you can imagine it like we got hired and then our name went into like some batch file somewhere and then the next morning the batch script ran and then created like all the new accounts and our account was subsequently created and then this you can imagine this client one virtual machine you can kind of imagine it as your corporate laptop so you got that and then um you can automatically log into it with your corporate credentials because it's already on the domain and you're like already on the network and and everything like that so going back to our going back to our client computer you can see we have our desktop and everything and and we're logged in and and everything
