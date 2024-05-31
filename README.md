@@ -14,6 +14,8 @@ After our virtual machine is created we're going to install server 2019 on it an
 
 After we have ip addressing setup we're going to name the server and then we're going to install active directory and create our domain through the server manager window (installation of an Active Directory Domain Services ).
 
+
+
 ![hello](Images/Diag2.png)
 
 We'll notice there's this little flag, we have to do our post deployment configuration. We installed the software for active directory domain services but we didn't actually create the domain yet so we'll click this to promote this computer.2 domain and we are going to say add new forest and then we can name the domain mydomain.com. (go next until install)
@@ -23,6 +25,8 @@ Now we're we're actually going to create our own dedicated domain admin account 
 Here mydomain.com is our newly created domain so let's just create an organizational unit to put our admin account in as kind of a folder in active directory for now so we'll name it, we will create a new user in a lot of organization is is like a dash name to signify this as an admin account.
 
 ![hello](Images/Diag3.png)
+
+We will right click it and go to properties and we'll go to member of and i'll say add and then we'll say domain admins and we'll say check we see it resolves to domain admin so we'll say okay apply okay so now we have our very own domain admin account so to use this let's go ahead and log out of the domain controller so we'll say sign out and then we'll do our control alt delete again and then instead of logging into this administrator one we're going to go to other user and we see it says sign into my domain
 
 ![hello](Images/Diag4.png)
 
