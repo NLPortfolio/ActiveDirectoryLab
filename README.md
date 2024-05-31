@@ -58,6 +58,10 @@ When the istallation is donne, we can go to tools and dhcp and we can set up our
  it's saying to add an ip address for a router used by clients to enter the address below so if we look at our network diagram here we see that we configured nat on the domain controller and the domain controller has like routing configured as well so its job is to amongst other things like forward traffic from the clients to the internet so because of this the clients are going to use this internal nick of the domain controller as their default gateway slash router so going back to our dhcp configuration we're just going to enter the domain controller's ip address. what do you want to use for your your domain server or your dns server again when you install active directory on the domain controller it automatically installs dns and so because of that we're going to use the domain controller as our dns server well we essentially have to do that or we can't join the domain in this case. You may have to um right click the dhcp server up here and say authorize so we'll do that and then right click this one more time and say refresh and then we can see our ipv4 thing turned green
 
 ![hello](Images/Diag9.png)
+
+
+Before we actually go and create our create our client computer and like join it to the domain and all that first we're going to um use our powershell script to create a whole bunch of users in active directory so we can kind of have a bunch of sample users
+
 ![hello](Images/Diag10.png)
 ![hello](Images/Diag11.png)
 ![hello](Images/Diag12.png)
