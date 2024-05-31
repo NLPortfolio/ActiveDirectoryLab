@@ -59,8 +59,12 @@ When the istallation is donne, we can go to tools and dhcp and we can set up our
 
 ![hello](Images/Diag9.png)
 
+Go back to the um the domain controller here and then we have to make a configuration that lets us browse the internet from the domain controller usually you don't want to do this unlike a production environment but we're just in a lab so we're going to click configure this local server and then we're going to disable this internet explorer enhanced security thing right here 
+
 
 Before we actually go and create our create our client computer and like join it to the domain and all that first we're going to um use our powershell script to create a whole bunch of users in active directory so we can kind of have a bunch of sample users
+
+Now that we have all of our users created and our whole environment set up let's let's look at our network diagram again here really quick so we pretty much have everything set up here our internet is is connected 
 
 ![hello](Images/Diag10.png)
 ![hello](Images/Diag11.png)
